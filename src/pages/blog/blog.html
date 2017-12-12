@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>blog</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-card *ngFor="let post of postlist" (click)="openArticle(post)">
+	  <img src="{{post.featured_image}}"/>
+	  <ion-card-content>
+	    <ion-card-title>
+	      {{post.title}}
+	      </ion-card-title>
+	      <ion-row [innerHTML]="post.content | slice: 0:50"></ion-row>
+	  </ion-card-content>
+	</ion-card>
+</ion-content>

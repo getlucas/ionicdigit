@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Article</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-card>
+	  <img src="{{post.featured_image}}"/>
+	  <ion-card-content>
+	    <ion-card-title>
+	      {{post.title}}
+	      </ion-card-title>
+	      <ion-row [innerHTML]="post.content"></ion-row>
+	  </ion-card-content>
+	</ion-card>
+</ion-content>
